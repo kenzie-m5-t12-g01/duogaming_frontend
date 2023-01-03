@@ -6,11 +6,7 @@ const GlobalStyle  = createGlobalStyle`
     --Color-primary-Focus: #FF427F;
     --Color-primary-Negative: #59323F;
     --White: #FFFFFF;
-    --Summer--1: rgba(44, 58, 64, 1); //2c3a40
-    --Summer--2: rgba(65, 85, 86, 1); //3f5559
-    --Summer--3: rgba(97, 136, 140, 1); //61888C
-    --Summer--4: rgba(159, 188, 191, 1); //9FBCBF
-    --Summer--5: rgba(20, 38, 17, 1); //142611
+    --Violet: #8B5CF6;
     --Blue-1: rgb(25, 175, 230);
     --Grey-4: #121214;
     --Grey-3: #212529;
@@ -18,19 +14,35 @@ const GlobalStyle  = createGlobalStyle`
     --Grey-1: #868E96;
     --Grey-0: #F8F9FA;
     --GreySoft: #666666;
-    --Background-darkGrey: #313131; 
+    --Background-darkGrey: #2A2634; 
     --Background-Grey: #464646; 
     --Black: #0000000;
     --Sucess: #3FE864;
     --Negative: #E83F5B;
     --BorderColor: rgba(102, 102, 102, 1);
-    --fontColor-1: rgba(192, 177, 132, 01);//#c0b184
-    --fontColor-2: #F8F9FA; //CCC
+    --fontColor-1: #FFFFFF;
+    --fontColor-2: #A1A1AA; 
     --fontWeight-Strong: 700;
     --fontWeight-Soft: 400;
     --fontInter: url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;700&family=Inter:wght@100;200;300;400;500;600;700;800&family=Montserrat:ital,wght@0,100;0,200;0,400;0,500;1,500&family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap');
 
     font-size: 60%;   
+
+    /* TESTE COM O CAMINHO DO DIRETÓRIO NÃO FUNCIONOU */
+    /* --slide-1: url(../assets/images/games/Apex.png);
+    --slide-2: url(../assets/images/games/CounterStrike.png);
+    --slide-3: url(../assets/images/games/Dota2.png);
+    --slide-4: url(../assets/images/games/Fortinite.png);
+    --slide-5: url(../assets/images/games/LeagueOfLegends.png);
+    --slide-6: url(../assets/images/games/WarCraft.png); */
+
+    /* DIFERENTE DO MOSTRADO EM PESQUISA, SÓ FUNCIONOU COM LINK NA IMAGEM */
+    --slide-1: url('https://farm66.staticflickr.com/65535/52604017917_2b55dfbdf2_m.jpg');
+    --slide-2: url('https://farm66.staticflickr.com/65535/52604519421_c73afd7524_m.jpg');
+    --slide-3: url('https://farm66.staticflickr.com/65535/52605024093_d370d6a7f6_m.jpg');
+    --slide-4: url('https://farm66.staticflickr.com/65535/52604017847_95a9f678e0_m.jpg');
+    --slide-5: url('https://farm66.staticflickr.com/65535/52604017857_9537827a82_m.jpg');
+    --slide-6: url('https://farm66.staticflickr.com/65535/52605024113_23eec2f9cc_m.jpg');
   }
 
   @media (min-width: 700px) {

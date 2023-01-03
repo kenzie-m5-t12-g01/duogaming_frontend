@@ -9,26 +9,32 @@ const gamesList = [
   {
     name:'Apex Legends',
     image: Apex,
+    url: '--slide-1'
   },
   {
     name:'Counter Strike',
     image: CounterStrike,
+    url: '--slide-2'
   },
   {
     name:'Dota 2',
     image: Dota2,
+    url: '--slide-3'
   },
   {
     name:'Fortinite',
     image: Fortinite,
+    url: '--slide-4'
   },
   {
     name:'League of Legends',
     image: LeagueOfLegends,
+    url: '--slide-5'
   },
   {
     name:'WarCraft',
     image: WarCraft,
+    url: '--slide-6'
   },
 ]
 

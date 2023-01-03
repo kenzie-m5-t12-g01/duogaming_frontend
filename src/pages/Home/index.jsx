@@ -5,6 +5,8 @@ import HomeStyle from "./style";
 
 // Database
 import { gamesList } from "../../database/games_list";
+import CardGame from "./components/Cards";
+import { FaSearchPlus } from "react-icons/fa";
 
 function HomePage() {
   return (
@@ -13,21 +15,30 @@ function HomePage() {
         <BackgroundImage />
       </div>
       <div>
-        <h1>Duogaming</h1>{" "} {/* <h1/> está invisivel - existe apenas para o rank de sites*/}
+        <h1>Duogaming</h1>{" "}
+        {/* <h1/> está invisivel - existe apenas para o rank de sites*/}
         <Logotipo />
       </div>
       <div>
         <SloganHome />
       </div>
       <section>
-        {gamesList.map((e) => (
-          <figure>
-            <img src={e.image} alt={`Game ${e.name}`} />
-            <h2>{e.name}</h2>
-            <span>4 jogadores</span>
-          </figure>
+        {gamesList.map((game, index) => (
+          <CardGame game={game} key={index} />
         ))}
       </section>
+      <footer>
+        <div>
+          <div>
+            <h2>Não encontrou seu duo?</h2>
+            <span>Publique um anúncio para encontrar novos players!</span>
+          </div>
+          <div>
+            <FaSearchPlus />
+            <button>Publicar anúncio</button>
+          </div>
+        </div>
+      </footer>
     </HomeStyle>
   );
 }
