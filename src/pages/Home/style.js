@@ -29,18 +29,18 @@ const HomeStyle = styled.main`
   }
   section {
     max-width: 80%;
-    margin: 0 auto 10px;
-    padding: 0;
-    display: flex;
-    gap: 1.8rem;
-
-    overflow: scroll;
-    overflow-y: hidden;
-    /* &::-webkit-scrollbar {
-      width: 20px;
-      scrollbar-color: red;
-      background-color: white; 
-    } */
+      margin: 0 auto 10px;
+      padding: 0;
+      display: flex;
+      gap: 1.8rem;
+      
+      overflow: scroll;
+      overflow-y: hidden;
+      /* &::-webkit-scrollbar {
+        width: 20px;
+        scrollbar-color: red;
+        background-color: white; 
+      } */
   }
   footer {
     height: 100px;
