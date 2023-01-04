@@ -11,7 +11,7 @@ const adsList = [
     userName: 'Samantha Brekke',
     experience: '2 anos',
     availability: '18h - 20h',
-    weekDay:['sex', 'sab', 'dom'],
+    weekDay:['sab', 'dom'],
     voice: false
   }
 ]
