@@ -13,7 +13,16 @@ const ModalCardsAdsStyle = styled.div`
     div{
       height: 80%;
       span{
+        font-size: 16px;
         color: var(--fontColor-2);
+      }
+      h2{
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
+      h3{
+        font-size: 14px;
+        margin-bottom: 10px;
       }
     }
 
@@ -23,9 +32,16 @@ const ModalCardsAdsStyle = styled.div`
       padding: 5px;
       align-self: center;
       border: 8px;
+      border-radius: 8px  ;
       text-decoration: none;
       color: var(--fontColor-1);
       background-color: var(--Violet);
+      display: flex;
+      gap: 1rem;
+      svg{
+        color: white;
+        align-self: center;
+      }
     }
 `;
 

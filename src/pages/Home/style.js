@@ -86,6 +86,7 @@ const HomeStyle = styled.main`
         border-radius: 6px;
         gap: 1rem;
         background-color: var(--Violet);
+        cursor: pointer;
         svg{
           color: var(--fontColor-1);
           height: 20px;
