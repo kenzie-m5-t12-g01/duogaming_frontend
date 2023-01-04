@@ -5,6 +5,7 @@ const CardStyle = styled.figure`
   width: 160px;
   border-radius: 8px;
   background-image: var(${(image) => image.image});
+  cursor: pointer;
 
   -webkit-box-shadow: inset 9px -129px 31px -23px rgba(0,0,0,0.75);
   -moz-box-shadow: inset 9px -129px 31px -23px rgba(0,0,0,0.75);
