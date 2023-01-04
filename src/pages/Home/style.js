@@ -56,7 +56,7 @@ const HomeStyle = styled.main`
       padding: 10px;
       border-radius: 0 0 8px 8px;
       z-index: 1;
-      background-color: var(--Background-darkGrey);
+      background-color: var(--Background-Grey);
       display: flex;
       justify-content: space-between;
 

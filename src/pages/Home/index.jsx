@@ -12,7 +12,7 @@ import { useState } from "react";
 
 function HomePage() {
   const [openModal, setOpenModal] = useState(false)
-  console.log(openModal)
+
   return (
     <>
       <HomeStyle>
