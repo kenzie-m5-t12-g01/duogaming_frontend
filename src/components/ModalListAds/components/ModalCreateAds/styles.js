@@ -18,79 +18,11 @@ const ModalCreateAdsStyle = styled.section`
 
   h2{
     font-weight: 800;
+    margin-top: 50px;
     margin-bottom: 30px;
   }
-  /*div:nth-child(2){  informações pessoais */
-  /* width: 90%;
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-    label{
-      cursor: pointer;
-      margin-bottom: 10px;
-      h3{
-        font-size: 18px;
-        line-height: 26px;
-        margin-left: 10px;
-      }
-      input{
-        width: 100%;
-        color: var(--fontColor-1);
-        background-color: var(--Background-Grey);
-        padding: 5px 10px;
-        box-sizing: border-box;
-        border: 0;
-        &::placeholder{ 
-          color: var(--fontColor-placeholder);
-          font-size: 14px;
-        }
-      }
-    }   
-  }*/
 
-  /*div:nth-child(3){  experiência / contato */
-  /* width: 90%;
-  margin-bottom: 20px; 
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-    div{
-      width: 45%;
-      h3{
-        color: blue;
-      }
-      input{
-        width: 100%;
-        color: var(--fontColor-1);
-        background-color: var(--Background-Grey);
-        background-color: blue;
-        box-sizing: border-box;
-        border: 0;
-       
-      }
-    } 
-  }*/
-
-  /*div:nth-child(4){  diase semanais / horário  */
-  /* display: flex;
-  flex-direction: column;
-  width: 90%;
-    h3{
-      color: green;
-    }
-    div{
-      display: flex;
-      flex-direction: row;
-      figure{
-
-      }
-    }
-    input{
-      background-color: green;
-    } 
-  }*/
-
-  button{
+  button:nth-child(1){
     height: 30px;
     width: 30px;
     position: absolute;
@@ -105,6 +37,23 @@ const ModalCreateAdsStyle = styled.section`
       width: 100%;
       border: 0;
       color: var(--Violet);
+    }
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    button:nth-last-child(1){
+      height: 50px;
+      width: fit-content;
+      margin-top: 50px;
+      padding: 12px 20px;
+      border-radius: 6px;
+      background-color: var(--Violet);
+
+      font-size: 16px;
+      color: var(--fontColor-1);
     }
   }
 `;

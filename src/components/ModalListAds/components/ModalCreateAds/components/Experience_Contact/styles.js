@@ -5,16 +5,17 @@ const ExperienceContactStyle = styled.div`
   margin-bottom: 20px; 
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
     div{
-      width: 48%;
+      width: 40%;
       label{
       cursor: pointer;
       margin-bottom: 10px;
         h3{
           font-size: 14px;
           line-height: 26px;
-          margin-left: 10px;
+          margin-left: 5px;
+          white-space: nowrap;
         }
         input{
           width: 100%;
@@ -25,7 +26,7 @@ const ExperienceContactStyle = styled.div`
           border: 0;
           &::placeholder{ /* doc para navegadores = https://www.w3schools.com/howto/howto_css_placeholder.asp */
             color: var(--fontColor-placeholder);
-            font-size: 14px;
+            font-size: 12px;
           }
         }
       }
