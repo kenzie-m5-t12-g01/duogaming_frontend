@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const PersonalInfoStyle = styled.div`
-  width: 90%;
+  width: 80%;
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
