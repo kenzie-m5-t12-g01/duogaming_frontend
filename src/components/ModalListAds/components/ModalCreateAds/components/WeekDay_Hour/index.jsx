@@ -18,49 +18,49 @@ function WeekdayHour({register}) {
         <div>
           <div>
             <label>
-              <figure alt="seg" about="dias da semana - seg" id="seg" onClick={() => setColorSeg(!colorSeg)}>S</figure>
+              <figure alt="seg" about="dias da semana - seg" id="seg" onClick={() => setColorSeg(!colorSeg)}>seg</figure>
               <input type="checkbox" id="seg" {...register("seg")}/>
             </label>
           </div>
 
           <div>
             <label>
-              <figure alt="ter" about="dias da semana - ter" id="ter" onClick={() => setColorTer(!colorTer)}>T</figure>
+              <figure alt="ter" about="dias da semana - ter" id="ter" onClick={() => setColorTer(!colorTer)}>ter</figure>
               <input type="checkbox" id="ter" {...register("ter")}/>
             </label>
           </div>
 
           <div>
             <label>
-              <figure alt="qua" about="dias da semana - qua" id="qua" onClick={() => setColorQua(!colorQua)}>Q</figure>
+              <figure alt="qua" about="dias da semana - qua" id="qua" onClick={() => setColorQua(!colorQua)}>qua</figure>
               <input type="checkbox" id="qua" {...register("qua")}/>
             </label>
           </div>
 
           <div>
             <label>
-              <figure alt="qui" about="dias da semana - qui" id="qui" onClick={() => setColorQui(!colorQui)}>Q</figure>
+              <figure alt="qui" about="dias da semana - qui" id="qui" onClick={() => setColorQui(!colorQui)}>qui</figure>
               <input type="checkbox" id="qui" {...register("qui")}/>
             </label>
           </div>
 
           <div>
             <label>
-              <figure alt="sex" about="dias da semana - sex" id="sex" onClick={() => setColorSex(!colorSex)}>S</figure>
+              <figure alt="sex" about="dias da semana - sex" id="sex" onClick={() => setColorSex(!colorSex)}>sex</figure>
               <input type="checkbox" id="sex" {...register("sex")}/>
             </label>
           </div>
 
           <div>
             <label>
-              <figure alt="sab" about="dias da semana - sab" id="sab" onClick={() => setColorSab(!colorSab)}>S</figure>
+              <figure alt="sab" about="dias da semana - sab" id="sab" onClick={() => setColorSab(!colorSab)}>sab</figure>
               <input type="checkbox" id="sab" {...register("sab")}/>
             </label>
           </div>
 
           <div>
             <label>
-              <figure alt="dom" about="dias da semana - dom" id="dom" onClick={() => setColorDom(!colorDom)}>D</figure>
+              <figure alt="dom" about="dias da semana - dom" id="dom" onClick={() => setColorDom(!colorDom)}>dom</figure>
               <input type="checkbox" id="dom" {...register("dom")}/>
             </label>
           </div>

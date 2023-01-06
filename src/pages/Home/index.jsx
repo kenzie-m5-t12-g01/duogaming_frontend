@@ -3,13 +3,14 @@ import BackgroundImage from "../../components/Background";
 import Logotipo from "../../components/Logotipo";
 import HomeStyle from "./style";
 import { FaSearchPlus } from "react-icons/fa";
+import LoginOrLogout from "../../components/LoginOrLogout";
 import ModalListAds from "../../components/ModalListAds";
+import ModalCreateAds from "../../components/ModalListAds/components/ModalCreateAds";
 
 // Database
 import { gamesList } from "../../database/games_list";
 import CardGame from "./components/Cards";
 import { useState } from "react";
-import ModalCreateAds from "../../components/ModalListAds/components/ModalCreateAds";
 
 function HomePage() {
   const [openModalListAds, setOpenModalListAds] = useState(false)
@@ -17,6 +18,7 @@ function HomePage() {
 
   return (
     <>
+      <LoginOrLogout/>
       <HomeStyle>
         <div>
           <BackgroundImage />

@@ -18,15 +18,19 @@ const WeekdayHourStyle = styled.div`
       flex-flow: row wrap;
       justify-content: flex-start;
       padding: 0 2px;
-      gap: 8px;
+      gap: 5px;
       div{
         width: fit-content;
         display: flex;
         flex-direction: column; 
 
+        figure{
+          text-align: center;
+        }
+        
         figure#seg {
           cursor: pointer;
-          width: 20px;
+          width: 35px;
           font-size: 14px;
           padding: 5px;
           /* implentar lógica de marcação */
@@ -34,7 +38,7 @@ const WeekdayHourStyle = styled.div`
         }
         figure#ter {
           cursor: pointer;
-          width: 20px;
+          width: 35px;
           font-size: 14px;
           padding: 5px;
           /* implentar lógica de marcação */
@@ -42,7 +46,7 @@ const WeekdayHourStyle = styled.div`
         }
         figure#qua {
           cursor: pointer;
-          width: 20px;
+          width: 35px;
           font-size: 14px;
           padding: 5px;
           /* implentar lógica de marcação */
@@ -50,7 +54,7 @@ const WeekdayHourStyle = styled.div`
         }
         figure#qui {
           cursor: pointer;
-          width: 20px;
+          width: 35px;
           font-size: 14px;
           padding: 5px;
           /* implentar lógica de marcação */
@@ -58,7 +62,7 @@ const WeekdayHourStyle = styled.div`
         }
         figure#sex {
           cursor: pointer;
-          width: 20px;
+          width: 35px;
           font-size: 14px;
           padding: 5px;
           /* implentar lógica de marcação */
@@ -66,7 +70,7 @@ const WeekdayHourStyle = styled.div`
         }
         figure#sab {
           cursor: pointer;
-          width: 20px;
+          width: 35px;
           font-size: 14px;
           padding: 5px;
           /* implentar lógica de marcação */
@@ -74,7 +78,7 @@ const WeekdayHourStyle = styled.div`
         }
         figure#dom {
           cursor: pointer;
-          width: 20px;
+          width: 35px;
           font-size: 14px;
           padding: 5px;
           /* implentar lógica de marcação */
