@@ -10,6 +10,8 @@ const LoginOrLogoutStyle = styled.section`
   justify-content: space-evenly;
   align-items: center;
 
+  cursor: pointer;
+
   h2{
    font-size: 1.8rem;
    color: var(--fontColor-1);
