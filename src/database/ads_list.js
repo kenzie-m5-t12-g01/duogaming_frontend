@@ -5,14 +5,16 @@ const adsList = [
     experience: '2 anos',
     availability: '18h - 20h',
     weekDay:['seg','ter','qua'],
-    voice: true
+    voice: true,
+    contact: 'https://discord.gg/eePS93Qd'
   },
   {
     userName: 'Samantha Brekke',
     experience: '2 anos',
     availability: '18h - 20h',
-    weekDay:['sex', 'sab', 'dom'],
-    voice: false
+    weekDay:['sab', 'dom'],
+    voice: false,
+    contact: 'https://wa.me/55988359936'
   }
 ]
 

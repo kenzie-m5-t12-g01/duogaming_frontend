@@ -56,7 +56,7 @@ const HomeStyle = styled.main`
       padding: 10px;
       border-radius: 0 0 8px 8px;
       z-index: 1;
-      background-color: var(--Background-darkGrey);
+      background-color: var(--Background-Grey);
       display: flex;
       justify-content: space-between;
 
@@ -86,6 +86,7 @@ const HomeStyle = styled.main`
         border-radius: 6px;
         gap: 1rem;
         background-color: var(--Violet);
+        cursor: pointer;
         svg{
           color: var(--fontColor-1);
           height: 20px;
