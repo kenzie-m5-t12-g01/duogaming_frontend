@@ -69,7 +69,12 @@ function WeekdayHour({register}) {
       <div>
         <h3>Qual horário do dia?</h3>
         <div>
-          <div>
+        <select name="select" id="period" {...register("period")}>
+          <option value="morning">manhã</option>
+          <option value="afternoon" selected>tarde</option>
+          <option value="night">noite</option>
+        </select>
+          {/* <div>
             <label htmlFor="" about="disponibilidade hora de inicial">
               <input type="text"  id="initialHour" {...register("initialHour")} placeholder="De"/>
             </label>
@@ -78,7 +83,9 @@ function WeekdayHour({register}) {
             <label htmlFor="" about="disponibilidade hora final" >
               <input type="text" id="finallHour" {...register("finallHour")} placeholder="Até"/>
             </label>
-          </div>
+          </div> 
+          **** código antigo, onde era utilizado hora inicial e final          
+          */} 
         </div>
       </div>
     </WeekdayHourStyle>

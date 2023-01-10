@@ -21,7 +21,6 @@ function HomePage() {
   const [openModalCreateAds, setOpenModalCreateAds] = useState(false)
   const [openModalLogin, setOpenModalLogin] = useState(false)
   const [openModalRegisterUser, setOpenModalRegisterUser] = useState(false)
-  console.log(openModalRegisterUser)
   return (
     <>
       <LoginOrLogout setOpenModalLogin={setOpenModalLogin}/>

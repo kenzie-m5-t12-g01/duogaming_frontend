@@ -1,8 +1,8 @@
 import axios from 'axios'
 
-const Api = axios.create({
-    baseURL: 'http://127.0.0.1:8000/api/',
-    timeout: 30000
+const api = axios.create({
+    baseURL: 'https://duogamingbackend-production.up.railway.app/api',
+    timeout: 5000
 })
 
-export default Api
+export default api

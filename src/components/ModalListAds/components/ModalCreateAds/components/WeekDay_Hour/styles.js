@@ -101,7 +101,21 @@ const WeekdayHourStyle = styled.div`
       width: 100%;
       display: flex;
       justify-content: space-evenly;
-      div {
+
+      select{
+        box-sizing: border-box;
+        padding: 5px 10px;
+        color: var(--fontColor-1);
+        background-color: var(--Background-Grey);
+        font-size: 16px;
+        border-color: var(--Violet);
+        option{
+            color: var(--fontColor-placeholder);
+            font-size: 16px;       
+        }
+      }
+
+      /* div {
         width: 40%;
         input {
           width: 100%;
@@ -111,12 +125,12 @@ const WeekdayHourStyle = styled.div`
           box-sizing: border-box;
           border: 0;
           &::placeholder {
-            /* doc para navegadores = https://www.w3schools.com/howto/howto_css_placeholder.asp */
+             doc para navegadores = https://www.w3schools.com/howto/howto_css_placeholder.asp 
             color: var(--fontColor-placeholder);
             font-size: 14px;
           }
         }
-      }
+      }*/
     }
   }
 `;

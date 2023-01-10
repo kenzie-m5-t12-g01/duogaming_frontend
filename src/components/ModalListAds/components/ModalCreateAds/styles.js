@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const ModalCreateAdsStyle = styled.section`
- position: fixed;
+  position: fixed;
   z-index: 999;
   height: 80vh;
   width: 30vw;

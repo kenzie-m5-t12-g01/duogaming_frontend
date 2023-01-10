@@ -6,43 +6,16 @@ import WeekdayHour from "./components/WeekDay_Hour";
 
 // userform
 import { useForm } from "react-hook-form";
+import { useContext } from "react";
+import { HomePageContext } from "../../../../context/MainPage";
 
 function ModalCreateAds({ setOpenModalCreateAds }) {
+
+  const {registerAds} = useContext(HomePageContext)
 
   const {register, handleSubmit, formState: {errors}} = useForm({
     // resolver: yupResolver(schema)
   })
-
-  function registerAds (data){
-
-    const weekArr = [data.seg, data.ter, data.qua, data.qui, data.sex, data.sab, data.dom]
-    const week_days = []
-
-    for (let i = 0; i < weekArr.length; i++){
-      if(weekArr[i] === true && i === 0 ){
-        week_days.push('seg')   
-      }
-      else if(weekArr[i] === true && i === 1 ){
-        week_days.push('ter')
-      }
-      else if(weekArr[i] === true && i === 2 ){
-        week_days.push('qua')
-      }
-      else if(weekArr[i] === true && i === 3 ){
-        week_days.push('qui')
-      }
-      else if(weekArr[i] === true && i === 4 ){
-        week_days.push('sex')
-      }
-      else if(weekArr[i] === true && i === 5 ){
-        week_days.push('sab')
-      }
-      else if(weekArr[i] === true && i === 6 ){
-        week_days.push('dom')
-      }
-    }
-    console.log(week_days)
-  }
 
   return (
     <ModalCreateAdsStyle>

@@ -17,13 +17,24 @@ const CardStyle = styled.figure`
     z-index: 1;
     margin-top: 150px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
     h3 {
       color: var(--White);
-      text-align: start;
+      text-align: center;
       font-size: 1.8rem;
     }
     span {
-      color: var(--White);
+      align-self: center;
+      width: fit-content;
+      padding: 2px;
+      font-size: 12px;
+      font-weight: 800;
+      color: white;
+      border: 3px solid var(--Violet);
+      background-color: black;
+      border-radius: 5px;
       text-align: start;
       margin-left: 10px;
     }

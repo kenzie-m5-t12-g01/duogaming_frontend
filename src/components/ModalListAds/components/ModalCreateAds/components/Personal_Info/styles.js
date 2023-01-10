@@ -13,6 +13,18 @@ const PersonalInfoStyle = styled.div`
         line-height: 26px;
         margin-left: 10px;
       }
+      select{
+        width: 100%;
+        height: fit-content;
+        padding: 5px 10px;
+        color: var(--fontColor-1);
+        background-color: var(--Background-Grey);
+        border-color: var(--Violet);
+        option{
+          color: var(--fontColor-placeholder);
+          font-size: 16px;    
+        }
+      }
       input{
         width: 100%;
         color: var(--fontColor-1);
