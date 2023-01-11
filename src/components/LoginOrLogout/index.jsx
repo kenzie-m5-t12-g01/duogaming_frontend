@@ -5,12 +5,12 @@ import { HomePageContext } from "../../context/MainPage";
 
 function LoginOrLogout({setOpenModalLogin}) {
   
-  const {token, logoutUser} = useContext(HomePageContext)
+  const {authenticated, logoutUser} = useContext(HomePageContext)
 
   return (
     <>
     <LoginOrLogoutStyle >
-      <h2 onClick={()=>setOpenModalLogin(true)}>{`${token? 'Nickname': 'Entrar'}`}</h2>
+      <h2 onClick={()=>setOpenModalLogin(true)}>{`${authenticated? 'Nickname': 'Entrar'}`}</h2>
       <BiLogIn onClick={()=>logoutUser()}/>
     </LoginOrLogoutStyle>
     </>

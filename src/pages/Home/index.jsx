@@ -21,8 +21,7 @@ function HomePage() {
 
 
   const {openModalListAds, setOpenModalListAds, openModalCreateAds, setOpenModalCreateAds,
-    openModalLogin, setOpenModalLogin, openModalRegisterUser, setOpenModalRegisterUser,token } = useContext(HomePageContext)
-
+    openModalLogin, setOpenModalLogin, openModalRegisterUser, setOpenModalRegisterUser, authenticated } = useContext(HomePageContext)
   return (
     <>
       <LoginOrLogout setOpenModalLogin={setOpenModalLogin}/>
@@ -45,7 +44,7 @@ function HomePage() {
             <CardGame game={game} key={index} setOpenModalListAds={setOpenModalListAds}/>
           ))}
         </section>
-        {token && <footer>
+        {authenticated && <footer>
           <div>
             <div>
               <h2>Não encontrou seu duo?</h2>
