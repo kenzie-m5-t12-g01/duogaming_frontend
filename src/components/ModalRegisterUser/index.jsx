@@ -9,7 +9,8 @@ function RegisterUserModal({setOpenModalRegisterUser}) {
 
   const {createUser} = useContext(HomePageContext)
 
-  const {register, handleSubmit, formState: {errors}} = useForm({
+  const {register, handleSubmit} = useForm({
+  // const {register, handleSubmit, formState: {errors}} = useForm({
     // resolver: yupResolver(schema)
   })
 
@@ -22,7 +23,7 @@ function RegisterUserModal({setOpenModalRegisterUser}) {
       <form action="" onSubmit={handleSubmit(createUser)}>
         <label>
           <h3>Nome de usuário / apelido</h3>
-          <input type="text" id="nickName" {...register("nickName")} placeholder="nome que ficará visivel para outros jogadores"/>
+          <input type="text" id="username" {...register("username")} placeholder="nome que ficará visivel para outros jogadores"/>
         </label>
         <label>
           <h3>E-mail</h3>

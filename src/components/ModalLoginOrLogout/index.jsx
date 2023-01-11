@@ -9,13 +9,11 @@ function ModalLoginOrLogout({setOpenModalLogin, setOpenModalRegisterUser}) {
   
   const {loginUser} = useContext(HomePageContext)
 
-  const {register, handleSubmit, formState: {errors}} = useForm({
+  const {register, handleSubmit} = useForm({
+  // const {register, handleSubmit, formState: {errors}} = useForm({
     // resolver: yupResolver(schema)
   })
-  function registerUser(data){
-    console.log(data)
-  }
-  
+
   return (
     <ModalLoginOrLogoutStyle>
       <button onClick={()=> setOpenModalLogin(false)}>
@@ -24,7 +22,7 @@ function ModalLoginOrLogout({setOpenModalLogin, setOpenModalRegisterUser}) {
       <form action="" onSubmit={handleSubmit(loginUser)}>
         <label>
           <h3>Nome de usuário</h3>
-          <input type="text" id="email" {...register("email")} placeholder="insira o seu nick cadastrado"/>
+          <input type="text" id="username" {...register("username")} placeholder="insira o seu nick cadastrado"/>
         </label>
         <label>
           <h3>Senha</h3>

@@ -1,9 +1,15 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
 import api from "../../services/api";
 
 export const HomePageContext = createContext();
 
 const HomePageProvider = ({ children }) => {
+  const [openModalListAds, setOpenModalListAds] = useState(false);
+  const [openModalCreateAds, setOpenModalCreateAds] = useState(false);
+  const [openModalLogin, setOpenModalLogin] = useState(false);
+  const [openModalRegisterUser, setOpenModalRegisterUser] = useState(false);
+  const [ token, setToken] = useState(false)
+
   const createUser = async (data) => {
     const userInfo = {
       ...data,
@@ -12,22 +18,35 @@ const HomePageProvider = ({ children }) => {
     };
     console.log(userInfo);
 
-    await api
+    const response = await api
       .post("users/", userInfo)
       .then((res) => console.log(res))
       .catch((error) => console.log(error));
+
+    if (response) {
+      openModalRegisterUser(false);
+    }
   };
 
   const loginUser = async (data) => {
     console.log(data);
-      await api
-        .post("/users/login/", data)
-        .then((res) => {
-          console.log(res);
-          localStorage.setItem("userID", res.token); //revisar o caminho do token
-        })
-        .catch((error) => console.log(error));
+    const response = await api
+      .post("/users/login/", data)
+      .then((res) =>  res)
+      .catch((error) => console.log(error));
+
+    if (response) {
+      setOpenModalLogin(false);
+      localStorage.setItem("userToken", JSON.stringify(response.data.access))
+      localStorage.setItem("nickName", JSON.stringify(data.username))
+      setToken(true)
+    }
   };
+  
+  const logoutUser = () => {
+    localStorage.clear()
+    setToken(false)
+  }
 
   const getWeekDays = async (data) => {
     const weekArr = [
@@ -61,7 +80,7 @@ const HomePageProvider = ({ children }) => {
     return week_days;
   };
   const registerAds = async (data, id) => {
-    console.log(data)
+    console.log(data);
     const weekDaysArray = await getWeekDays(data);
     const registerAdsData = {
       nickname: data.nameOrNickname,
@@ -79,8 +98,42 @@ const HomePageProvider = ({ children }) => {
       .catch((error) => console.log(error));
   };
 
+  const listAllGamesAds = async(id) => {
+    console.log(id)
+    const config = {
+      headers: { Authorization: `Bearer ${token}` }
+    };
+
+    const bodyParameters = {
+      key: "value"
+   };
+  
+    
+    await api
+    .post(`games/${id}/ads/`, bodyParameters, config)
+    .then((res) => console.log(res))
+    .catch((error) => console.log(error));
+  }
+
   return (
-    <HomePageContext.Provider value={{ createUser, loginUser, registerAds }}>
+    <HomePageContext.Provider
+      value={{
+        createUser,
+        loginUser,
+        registerAds,
+        openModalListAds,
+        setOpenModalListAds,
+        openModalCreateAds,
+        setOpenModalCreateAds,
+        openModalLogin,
+        setOpenModalLogin,
+        openModalRegisterUser,
+        setOpenModalRegisterUser,
+        logoutUser,
+        token,
+        listAllGamesAds
+      }}
+    >
       {children}
     </HomePageContext.Provider>
   );

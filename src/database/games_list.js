@@ -7,36 +7,42 @@ import WarCraft from '../assets/images/games/WarCraft.png'
 
 const gamesList = [
   {
+    id:'944da42e-2564-4f33-955b-a4576b305002',
     title:'Apex Legends',
     image: Apex,
     url: '--slide-1',
     genres: "FPS"
   },
   {
+    id:'2ddd4837-30d4-4173-9cb1-c9dc0b7c331a',
     title:'Counter Strike',
     image: CounterStrike,
     url: '--slide-2',
     genres: "FPS"
   },
   {
+    id:'6fd8bc88-4ffa-4487-b5e9-015d3c295178',
     title:'Dota 2',
     image: Dota2,
     url: '--slide-3',
     genres: "RPG"
   },
   {
+    id:'b3ab51f1-6a80-410a-b032-ea15edc00d7f',
     title:'Fortinite',
     image: Fortinite,
     url: '--slide-4',
     genres: "FPS"
   },
   {
+    id:'1d2c76f4-5919-44fd-88b7-db7dc2ac5000',
     title:'League of Legends',
     image: LeagueOfLegends,
     url: '--slide-5',
     genres: "RPG"
   },
   {
+    id:'622a6622-e027-4f90-93a4-9d91007eecda',
     title:'WarCraft',
     image: WarCraft,
     url: '--slide-6',
@@ -45,36 +51,3 @@ const gamesList = [
 ]
 
 export {gamesList}
-
-const gamesList_2 = [
-  {
-    name:'Apex Legends',
-    image: Apex,
-    url: 'https://farm66.staticflickr.com/65535/52604017917_2b55dfbdf2_m.jpg'
-  },
-  {
-    name:'Counter Strike',
-    image: CounterStrike,
-    url: 'https://farm66.staticflickr.com/65535/52604519421_c73afd7524_m.jpg'
-  },
-  {
-    name:'Dota 2',
-    image: Dota2,
-    url: 'https://farm66.staticflickr.com/65535/52605024093_d370d6a7f6_m.jpg'
-  },
-  {
-    name:'Fortinite',
-    image: Fortinite,
-    url: 'https://farm66.staticflickr.com/65535/52604017847_95a9f678e0_m.jpg'
-  },
-  {
-    name:'League of Legends',
-    image: LeagueOfLegends,
-    url: 'https://farm66.staticflickr.com/65535/52604017857_9537827a82_m.jpg'
-  },
-  {
-    name:'WarCraft',
-    image: WarCraft,
-    url: 'https://farm66.staticflickr.com/65535/52605024113_23eec2f9cc_m.jpg'
-  },
-]

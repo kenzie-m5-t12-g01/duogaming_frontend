@@ -14,13 +14,15 @@ import ModalCreateAds from "../../components/ModalListAds/components/ModalCreate
 // Database
 import { gamesList } from "../../database/games_list";
 import CardGame from "./components/Cards";
-import { useState } from "react";
+import { useContext } from "react";
+import { HomePageContext } from "../../context/MainPage";
 
 function HomePage() {
-  const [openModalListAds, setOpenModalListAds] = useState(false)
-  const [openModalCreateAds, setOpenModalCreateAds] = useState(false)
-  const [openModalLogin, setOpenModalLogin] = useState(false)
-  const [openModalRegisterUser, setOpenModalRegisterUser] = useState(false)
+
+
+  const {openModalListAds, setOpenModalListAds, openModalCreateAds, setOpenModalCreateAds,
+    openModalLogin, setOpenModalLogin, openModalRegisterUser, setOpenModalRegisterUser,token } = useContext(HomePageContext)
+
   return (
     <>
       <LoginOrLogout setOpenModalLogin={setOpenModalLogin}/>
@@ -43,7 +45,7 @@ function HomePage() {
             <CardGame game={game} key={index} setOpenModalListAds={setOpenModalListAds}/>
           ))}
         </section>
-        <footer>
+        {token && <footer>
           <div>
             <div>
               <h2>Não encontrou seu duo?</h2>
@@ -54,7 +56,7 @@ function HomePage() {
               <button>Publicar anúncio</button>
             </div>
           </div>
-        </footer>
+        </footer>}
       </HomeStyle>
       {openModalListAds && <ModalListAds setOpenModalListAds={setOpenModalListAds}/>}
       {openModalCreateAds && <ModalCreateAds setOpenModalCreateAds={setOpenModalCreateAds}/>}
