@@ -19,6 +19,10 @@ import { HomePageContext } from "../../context/MainPage";
 
 function HomePage() {
 
+  const modalsControl = ()=>{
+    setOpenModalCreateAds(true)
+    setOpenModalListAds(false)
+  }
 
   const {openModalListAds, setOpenModalListAds, openModalCreateAds, setOpenModalCreateAds,
     openModalLogin, setOpenModalLogin, openModalRegisterUser, setOpenModalRegisterUser, authenticated } = useContext(HomePageContext)
@@ -41,7 +45,7 @@ function HomePage() {
         </div>
         <section>
           {gamesList.map((game, index) => (
-            <CardGame game={game} key={index} setOpenModalListAds={setOpenModalListAds}/>
+            <CardGame game={game} key={index} setOpenModalListAds={setOpenModalListAds} setOpenModalCreateAds={setOpenModalCreateAds}/>
           ))}
         </section>
         {authenticated && <footer>
@@ -50,7 +54,7 @@ function HomePage() {
               <h2>Não encontrou seu duo?</h2>
               <span>Publique um anúncio para encontrar novos players!</span>
             </div>
-            <div onClick={()=>{setOpenModalCreateAds(true)}} about='abrir menu de criação de anuncios'>
+            <div onClick={()=> modalsControl()} about='abrir menu de criação de anuncios'>
               <FaSearchPlus />
               <button>Publicar anúncio</button>
             </div>

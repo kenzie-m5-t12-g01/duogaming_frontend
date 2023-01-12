@@ -11,6 +11,7 @@ const HomePageProvider = ({ children }) => {
   const [openModalRegisterUser, setOpenModalRegisterUser] = useState(false);
   const [authenticated, setAuthenticated] = useState(false);
   const [token, setToken] = useState("");
+  const [userName, setUsername] = useState('')
   const [gameList, setGameList] = useState();
 
   const createUser = async (data) => {
@@ -21,18 +22,21 @@ const HomePageProvider = ({ children }) => {
     };
     console.log(userInfo);
 
-    const response = await api
-      .post("users/", userInfo)
-      .then((res) => console.log(res))
-      .catch((error) => console.log(error));
+    try {
+       await api
+        .post("users/", userInfo)
+        .then((res) => console.log(res))
+        .catch((error) => console.log(error));
+      
+    } catch (error) {
+      console.log(error)
+    } finally {
+      setOpenModalRegisterUser(false)
 
-    if (response) {
-      openModalRegisterUser(false);
     }
   };
 
   const loginUser = async (data) => {
-    console.log(data);
     const response = await api
       .post("/users/login/", data)
       .then((res) => res)
@@ -44,12 +48,15 @@ const HomePageProvider = ({ children }) => {
       localStorage.setItem("nickName", JSON.stringify(data.username));
       setToken(response.data.access);
       setAuthenticated(true);
+      setUsername(data.username)
     }
   };
 
   const logoutUser = () => {
     localStorage.clear();
     setAuthenticated(false);
+    setOpenModalListAds(false)
+    setOpenModalCreateAds(false)
   };
 
   const getWeekDays = async (data) => {
@@ -108,10 +115,17 @@ const HomePageProvider = ({ children }) => {
       headers: { Authorization: `Bearer ${token}` },
     }
 
-    await api
-      .post(`/games/${gameId.id}/ads/`, registerAdsData, config)
-      .then((res) => console.log(res))
-      .catch((error) => console.log(error));
+    try {
+      
+      await api
+        .post(`/games/${gameId.id}/ads/`, registerAdsData, config)
+        .then((res) => console.log(res))
+        .catch((error) => console.log(error));
+    } catch (error) {
+      console.log(error)
+    } finally{
+      setOpenModalCreateAds(false)
+    }
   };
 
   const listAllAdsByGameId =  async(id) => {
@@ -142,6 +156,7 @@ const HomePageProvider = ({ children }) => {
         setOpenModalRegisterUser,
         logoutUser,
         authenticated,
+        userName,
         listAllAdsByGameId,
         gameList
       }}
